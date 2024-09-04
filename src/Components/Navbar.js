@@ -24,6 +24,10 @@ function NavigationBar() {
     setNav(!nav);
   };
 
+  const handleBookAppointmentClick = () => {
+    navigate("/appointment");
+  };
+
   const handleChatBtnClick = () => {
     if (!isButtonDisabled) {
       toast.info("Experiencing high traffic, Please wait a moment.", {
@@ -38,7 +42,7 @@ function NavigationBar() {
     <div className="navbar-section">
       <h1 className="navbar-title">
         <Link to="/">
-          Health <span className="navbar-sign">+</span>
+        Evergreen Memorial Hospital 
         </Link>
       </h1>
 
@@ -54,16 +58,12 @@ function NavigationBar() {
             Departments
           </Link>
           <div class="dropdown-content">
-            <a href="#">Department 1</a>
-            <a href="#">Department 2</a>
+            <a href="#"> Cardiology</a>
+            <a href="#">Orthopedics</a>
+            <a href="#">Neurology</a>
+            <a href="#">General Surgery</a>
           </div>
         </li>
-        {/* <li>
-          <a href="#services" className="navbar-links">
-            Services
-          </a>
-        </li> */}
-
         <li>
           <a href="#about" className="navbar-links">
             About
@@ -71,24 +71,23 @@ function NavigationBar() {
         </li>
         <li>
           <a href="#reviews" className="navbar-links">
-            Reviews
+            Doctors
           </a>
         </li>
         <li>
           <a href="#doctors" className="navbar-links">
-            Doctors
+            Hospatil
           </a>
         </li>
       </ul>
 
       <button
-        className="navbar-btn"
-        type="button"
-        disabled={isButtonDisabled}
-        onClick={handleChatBtnClick}
-      >
-        <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
-      </button>
+            className="text-appointment-btn"
+            type="button"
+            onClick={handleBookAppointmentClick}
+          >
+            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
+          </button>
 
       {/* Mobile */}
       <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>

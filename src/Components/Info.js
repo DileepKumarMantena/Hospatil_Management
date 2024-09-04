@@ -42,26 +42,7 @@ function Info() {
         </div>
       </div>
     </div>
-
-    // <div className="text-section info-section" id="services">
-    //   <div className="text-stats info-cards-content">
-    //     <div className="text-stats-container">
-    //       <p>145k+</p>
-    //       <p>Receive Patients</p>
-    //     </div>
-
-    //     <div className="text-stats-container">
-    //       <p>50+</p>
-    //       <p>Expert Doctors</p>
-    //     </div>
-
-    //     <div className="text-stats-container">
-    //       <p>10+</p>
-    //       <p>Years of Experience</p>
-    //     </div>
-    //   </div>
-    // </div>
-  );
+      );
 }
 
 export default Info;

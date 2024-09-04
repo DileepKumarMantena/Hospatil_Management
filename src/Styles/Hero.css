@@ -36,18 +36,17 @@
     line-height: 1.6rem;
 }
 .text-appointment-btn {
-    padding: 14px 20px;
+    margin-top: 20px; /* Adjust this value as needed */
+    padding: 10px 20px;
+    background-color: #007bff; /* Example color */
     color: white;
-    border: 1px solid transparent;
-    border-radius: 28px;
-    outline: transparent;
-    background-color: #1A8EFD;
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-    letter-spacing: .8px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all .4s ease;
-}
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
 .text-appointment-btn:hover {
     color: #1A8EFD;
     background-color: transparent;

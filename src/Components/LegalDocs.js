@@ -62,7 +62,7 @@ function LegalDocs() {
       </div>
 
       <div className="legal-footer">
-        <p>© 2013-2023 Health+. All rights reserved.</p>
+        <p>© 2013-2024 Evergreen Memorial Hospital. All rights reserved.</p>
       </div>
     </div>
   );
