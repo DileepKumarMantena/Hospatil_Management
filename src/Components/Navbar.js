@@ -64,11 +64,11 @@ function NavigationBar() {
             <a href="#">General Surgery</a>
           </div>
         </li>
-        <li>
+        {/* <li>
           <a href="#about" className="navbar-links">
             About
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="#reviews" className="navbar-links">
             Doctors
@@ -114,11 +114,6 @@ function NavigationBar() {
           <li>
             <a onClick={openNav} href="#services">
               Doctors
-            </a>
-          </li>
-          <li>
-            <a onClick={openNav} href="#about">
-              About
             </a>
           </li>
           <li>

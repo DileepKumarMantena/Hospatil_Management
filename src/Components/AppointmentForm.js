@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/AppointmentForm.css";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AppointmentForm() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  }, []);
 
   const [patientName, setPatientName] = useState("");
   const [patientNumber, setPatientNumber] = useState("");
@@ -19,12 +20,11 @@ function AppointmentForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate form inputs
     const errors = {};
     if (!patientName.trim()) {
       errors.patientName = "Patient name is required";
-    } else if (patientName.trim().length < 8) {
-      errors.patientName = "Patient name must be at least 8 characters";
+    } else if (patientName.trim().length < 3) {
+      errors.patientName = "Patient name must be at least 3 characters";
     }
 
     if (!patientNumber.trim()) {
@@ -54,7 +54,6 @@ function AppointmentForm() {
       return;
     }
 
-    // Reset form fields and errors after successful submission
     setPatientName("");
     setPatientNumber("");
     setPatientGender("default");
@@ -62,7 +61,7 @@ function AppointmentForm() {
     setPreferredMode("default");
     setFormErrors({});
 
-    toast.success("Appointment Scheduled !", {
+    toast.success("Appointment Scheduled!", {
       position: toast.POSITION.TOP_CENTER,
       onOpen: () => setIsSubmitted(true),
       onClose: () => setIsSubmitted(false),
@@ -72,9 +71,7 @@ function AppointmentForm() {
   return (
     <div className="appointment-form-section">
       <h1 className="legal-siteTitle">
-        <Link to="/">
-          Health <span className="legal-siteSign">+</span>
-        </Link>
+        <Link to="/">Evergreen Memorial Hospital</Link>
       </h1>
 
       <div className="form-container">
@@ -83,83 +80,93 @@ function AppointmentForm() {
         </h2>
 
         <form className="form-content" onSubmit={handleSubmit}>
-          <label>
-            Patient Full Name:
+          <div className="form-group">
+            <label>Patient Full Name:</label>
             <input
               type="text"
               value={patientName}
               onChange={(e) => setPatientName(e.target.value)}
-              required
+              className={formErrors.patientName ? "input-error" : ""}
             />
-            {formErrors.patientName && <p className="error-message">{formErrors.patientName}</p>}
-          </label>
+            {formErrors.patientName && (
+              <p className="error-message">{formErrors.patientName}</p>
+            )}
+          </div>
 
-          <br />
-          <label>
-            Patient Phone Number:
+          <div className="form-group">
+            <label>Patient Phone Number:</label>
             <input
               type="text"
               value={patientNumber}
               onChange={(e) => setPatientNumber(e.target.value)}
-              required
+              className={formErrors.patientNumber ? "input-error" : ""}
             />
-            {formErrors.patientNumber && <p className="error-message">{formErrors.patientNumber}</p>}
-          </label>
+            {formErrors.patientNumber && (
+              <p className="error-message">{formErrors.patientNumber}</p>
+            )}
+          </div>
 
-          <br />
-          <label>
-            Patient Gender:
+          <div className="form-group">
+            <label>Patient Gender:</label>
             <select
               value={patientGender}
               onChange={(e) => setPatientGender(e.target.value)}
-              required
+              className={formErrors.patientGender ? "input-error" : ""}
             >
               <option value="default">Select</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="private">I will inform Doctor only</option>
             </select>
-            {formErrors.patientGender && <p className="error-message">{formErrors.patientGender}</p>}
-          </label>
+            {formErrors.patientGender && (
+              <p className="error-message">{formErrors.patientGender}</p>
+            )}
+          </div>
 
-          <br />
-          <label>
-            Preferred Appointment Time:
+          <div className="form-group">
+            <label>Preferred Appointment Time:</label>
             <input
               type="datetime-local"
               value={appointmentTime}
               onChange={(e) => setAppointmentTime(e.target.value)}
-              required
+              className={formErrors.appointmentTime ? "input-error" : ""}
             />
-            {formErrors.appointmentTime && <p className="error-message">{formErrors.appointmentTime}</p>}
-          </label>
+            {formErrors.appointmentTime && (
+              <p className="error-message">{formErrors.appointmentTime}</p>
+            )}
+          </div>
 
-          <br />
-          <label>
-            Preferred Mode:
+          <div className="form-group">
+            <label>Preferred Mode:</label>
             <select
               value={preferredMode}
               onChange={(e) => setPreferredMode(e.target.value)}
-              required
+              className={formErrors.preferredMode ? "input-error" : ""}
             >
               <option value="default">Select</option>
               <option value="voice">Voice Call</option>
               <option value="video">Video Call</option>
             </select>
-            {formErrors.preferredMode && <p className="error-message">{formErrors.preferredMode}</p>}
-          </label>
+            {formErrors.preferredMode && (
+              <p className="error-message">{formErrors.preferredMode}</p>
+            )}
+          </div>
 
-          <br />
           <button type="submit" className="text-appointment-btn">
             Confirm Appointment
           </button>
 
-          <p className="success-message" style={{display: isSubmitted ? "block" : "none"}}>Appointment details has been sent to the patients phone number via SMS.</p>
+          <p
+            className="success-message"
+            style={{ display: isSubmitted ? "block" : "none" }}
+          >
+            Appointment details have been sent to the patient's phone number via SMS.
+          </p>
         </form>
       </div>
 
       <div className="legal-footer">
-        <p>© 2013-2024 Evergreen Memorial Hospital . All rights reserved.</p>
+        <p>© 2013-2024 Evergreen Memorial Hospital. All rights reserved.</p>
       </div>
 
       <ToastContainer autoClose={5000} limit={1} closeButton={false} />

@@ -15,8 +15,7 @@ function Doctors() {
         </h3>
 
         <p className="dt-description">
-        At Health Plus, our hospitals are committed to providing comprehensive healthcare services with state-of-the-art facilities and compassionate care. We strive to create a welcoming environment where patients receive personalized attention and world-class treatment. With a focus on patient safety, advanced medical technology, and a team of experienced healthcare professionals, our hospitals are dedicated to improving health and enhancing the quality of life for every individual we serve. Trust Health Plus for your healthcare needs and experience the difference in care that truly puts patients first.
-        </p>
+        At Evergreen Memorial Hospital, we provide comprehensive healthcare with advanced facilities and compassionate care. Our experienced team is dedicated to patient safety, personalized attention, and world-class treatment to improve health and quality of life. Choose us for a care experience that puts patients first.        </p>
       </div>
 
       <div className="dt-cards-content">
@@ -24,21 +23,25 @@ function Doctors() {
           img={profile1}
           name="MindCare Psychiatric Hospital"
           title="Vizag"
+          contact="989898899"
         />
         <DoctorCard
           img={profile2}
           name="ClearView Eye Hospital"
           title="Hyderbad"
+          contact="989898889"
         />
         <DoctorCard
           img={profile3}
           name="Renew Orthopedic Hospital"
           title="Banglore"
+          contact="9849175143"
         />
         <DoctorCard
           img={profile4}
           name="Prime Care Hospital"
           title="Chennai"
+          contact="9849175142"
         />
       </div>
     </div>
