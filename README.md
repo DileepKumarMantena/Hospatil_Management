@@ -1,4 +1,4 @@
 Project Setup:
 clone the repo 
- then npm install
- npm start
+ then do  npm install
+  then do npm start

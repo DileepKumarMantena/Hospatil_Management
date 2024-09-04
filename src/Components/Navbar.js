@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
   faCircleCheck,
   faCalendarCheck,
-} from "@fortawesome/free-solid-svg-icons";
-import {
   faCommentDots,
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function NavigationBar() {
@@ -41,9 +37,7 @@ function NavigationBar() {
   return (
     <div className="navbar-section">
       <h1 className="navbar-title">
-        <Link to="/">
-        Evergreen Memorial Hospital 
-        </Link>
+        <Link to="/">Evergreen Memorial Hospital</Link>
       </h1>
 
       {/* Desktop */}
@@ -53,41 +47,36 @@ function NavigationBar() {
             Home
           </Link>
         </li>
-        <li class="dropdown">
+        <li className="dropdown">
           <Link to="/" className="navbar-links dropdown-toggle show nav-link">
             Departments
           </Link>
-          <div class="dropdown-content">
-            <a href="#"> Cardiology</a>
-            <a href="#">Orthopedics</a>
-            <a href="#">Neurology</a>
-            <a href="#">General Surgery</a>
+          <div className="dropdown-content">
+            <Link to="#">Cardiology</Link>
+            <Link to="#">Orthopedics</Link>
+            <Link to="#">Neurology</Link>
+            <Link to="#">General Surgery</Link>
           </div>
         </li>
-        {/* <li>
-          <a href="#about" className="navbar-links">
-            About
-          </a>
-        </li> */}
         <li>
-          <a href="#reviews" className="navbar-links">
+          <Link to="/doctors" className="navbar-links"> {/* Changed to Link */}
             Doctors
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#doctors" className="navbar-links">
-            Hospatil
-          </a>
+          <Link to="/hospital" className="navbar-links"> {/* Changed to Link */}
+            Hospital
+          </Link>
         </li>
       </ul>
 
       <button
-            className="text-appointment-btn"
-            type="button"
-            onClick={handleBookAppointmentClick}
-          >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
-          </button>
+        className="text-appointment-btn"
+        type="button"
+        onClick={handleBookAppointmentClick}
+      >
+        <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
+      </button>
 
       {/* Mobile */}
       <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
@@ -101,35 +90,30 @@ function NavigationBar() {
               Home
             </Link>
           </li>
-          <li class="dropdown">
+          <li className="dropdown">
             <Link to="/" className="navbar-links dropdown-toggle show nav-link">
               Departments
             </Link>
-            <div class="dropdown-content">
-              <a href="#">Department 1</a>
-              <a href="#">Department 2</a>
+            <div className="dropdown-content">
+              <Link to="#">Department 1</Link>
+              <Link to="#">Department 2</Link>
             </div>
           </li>
 
           <li>
-            <a onClick={openNav} href="#services">
+            <Link onClick={openNav} to="/doctors"> {/* Changed to Link */}
               Doctors
-            </a>
+            </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#reviews">
+            <Link onClick={openNav} to="/reviews">
               Reviews
-            </a>
+            </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#doctors">
-              Doctors
-            </a>
-          </li>
-          <li>
-            <a onClick={openNav} href="#contact">
+            <Link onClick={openNav} to="/contact">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -147,3 +131,4 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
+
