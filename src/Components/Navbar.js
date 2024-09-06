@@ -48,7 +48,7 @@ function NavigationBar() {
           </Link>
         </li>
         <li className="dropdown">
-          <Link to="/" className="navbar-links dropdown-toggle show nav-link">
+          <Link className="navbar-links dropdown-toggle show nav-link">
             Departments
           </Link>
           <div className="dropdown-content">
@@ -59,12 +59,16 @@ function NavigationBar() {
           </div>
         </li>
         <li>
-          <Link to="/doctors" className="navbar-links"> {/* Changed to Link */}
+          <Link to="/doctors" className="navbar-links">
+            {" "}
+            {/* Changed to Link */}
             Doctors
           </Link>
         </li>
         <li>
-          <Link to="/hospital" className="navbar-links"> {/* Changed to Link */}
+          <Link to="/hospital" className="navbar-links">
+            {" "}
+            {/* Changed to Link */}
             Hospital
           </Link>
         </li>
@@ -91,17 +95,21 @@ function NavigationBar() {
             </Link>
           </li>
           <li className="dropdown">
-            <Link to="/" className="navbar-links dropdown-toggle show nav-link">
+            <Link className="navbar-links dropdown-toggle show nav-link">
               Departments
             </Link>
             <div className="dropdown-content">
-              <Link to="#">Department 1</Link>
-              <Link to="#">Department 2</Link>
+              <Link to="/cardiology">Cardiology</Link>
+              <Link to="/orthopedics">Orthopedics</Link>
+              <Link to="/neurology">Neurology</Link>
+              <Link to="/generalsurgery">General Surgery</Link>
             </div>
           </li>
 
           <li>
-            <Link onClick={openNav} to="/doctors"> {/* Changed to Link */}
+            <Link onClick={openNav} to="/doctors">
+              {" "}
+              {/* Changed to Link */}
               Doctors
             </Link>
           </li>
@@ -131,4 +139,3 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
-

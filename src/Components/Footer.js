@@ -26,12 +26,12 @@ function Footer() {
           <p className="ft-list-title">About Us</p>
           <ul className="ft-list-items">
             <li>
-              <a href="mailto:support@deelipkumar@gmail.com">deelipkumar@gmail.com</a>
+              <a href="mailto:support@deelipkumar@gmail.com">
+                deelipkumar@gmail.com
+              </a>
             </li>
             <li>
-              <a href="mailto:deelipkumar@gmail.com">
-              deelipkumar@gmail.com
-              </a>
+              <a href="#">Visakhapatnam</a>
             </li>
             <li>
               <a href="tel:+9505816053">9505816053</a>
