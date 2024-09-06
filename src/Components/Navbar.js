@@ -52,10 +52,10 @@ function NavigationBar() {
             Departments
           </Link>
           <div className="dropdown-content">
-            <Link to="#">Cardiology</Link>
-            <Link to="#">Orthopedics</Link>
-            <Link to="#">Neurology</Link>
-            <Link to="#">General Surgery</Link>
+            <Link to="/cardiology">Cardiology</Link>
+            <Link to="/orthopedics">Orthopedics</Link>
+            <Link to="/neurology">Neurology</Link>
+            <Link to="/generalsurgery">General Surgery</Link>
           </div>
         </li>
         <li>
