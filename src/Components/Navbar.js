@@ -11,7 +11,7 @@ import {
 import "../Styles/Navbar.css";
 import { toast } from "react-toastify";
 
-function NavigationBar() {
+function NavigationBar({ onHospitalClick }) {
   const [nav, setNav] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const navigate = useNavigate();
@@ -66,12 +66,14 @@ function NavigationBar() {
           </Link>
         </li>
         <li>
-          <Link to="/hospital" className="navbar-links">
-            {" "}
-            {/* Changed to Link */}
-            Hospital
-          </Link>
-        </li>
+            <a
+              onClick={onHospitalClick}
+              className="navbar-links"
+              style={{ cursor: "pointer" }}
+            >
+              Hospital
+            </a>
+          </li>
       </ul>
 
       <button
