@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 import InformationCard from "./InformationCard";
 import {
   faHeartPulse,
@@ -9,40 +10,40 @@ import "../Styles/Info.css";
 
 function Info() {
   return (
-    // <div className="info-section" id="services">
-    //   <div className="info-cards-content">
-    //     <InformationCard title="Emergency Care" />
-
-    //     <InformationCard title="Heart Disease" />
-
-    //     <InformationCard title="Dental Care" />
-    //   </div>
-    // </div>
-
     <div className="info-section" id="services">
       <div className="info-cards-content">
         <div className="text-stats-container">
-          <p>145k+</p>
+          <p>
+            <CountUp end={145000} duration={15} separator="," suffix="+" />
+          </p>
           <p>Receive Patients</p>
         </div>
 
         <div className="text-stats-container">
-          <p>50+</p>
+          <p>
+            <CountUp end={50} duration={15} suffix="+" />
+          </p>
           <p>Expert Doctors</p>
         </div>
 
         <div className="text-stats-container">
-          <p>10+</p>
+          <p>
+            <CountUp end={10} duration={15} suffix="+" />
+          </p>
           <p>Years of Experience</p>
         </div>
 
         <div className="text-stats-container">
-          <p>20+</p>
+          <p>
+            <CountUp end={20} duration={15} suffix="+" />
+          </p>
           <p>Years of Experience</p>
         </div>
       </div>
     </div>
-      );
+  );
 }
 
 export default Info;
+
+
