@@ -4,10 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "../Styles/Hero.css";
+import Hospital1 from "../Assets/hospital1.jpg";
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+import "react-awesome-slider/dist/styles.css";
 
 function Hero() {
   const navigate = useNavigate();
   const [goUp, setGoUp] = useState(false);
+  const AutoplaySlider = withAutoplay(AwesomeSlider);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -34,31 +39,16 @@ function Hero() {
 
   return (
     <div className="section-container">
-      <div className="hero-section">
-        <div className="text-section">
-          <p className="text-headline">❤️ Health comes first</p>
-          <h2 className="text-title">Find your Doctor and make Appointments</h2>
-          <p className="text-description">
-            Talk to online doctors and get medical advice, online prescriptions,
-            refills, and medical notes within minutes. On-demand healthcare
-            services at your fingertips.
-          </p>
-          <button
-            className="text-appointment-btn"
-            type="button"
-            onClick={handleBookAppointmentClick}
-          >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
-          </button>
-        </div>
+      <AutoplaySlider
+        play={true}
+        cancelOnInteraction={false} // should stop playing on user interaction
+        interval={3000}
+      >
+        <div data-src={Hospital1} className="slider-img" />
+        <div data-src={Hospital1} className="slider-img" />
+        <div data-src={Hospital1} className="slider-img" />
+      </AutoplaySlider>
 
-        {/* Correctly place the image section here */}
-        <div className="hero-image-section">
-          <img className="hero-image1" src={Doctor} alt="Doctor" />
-        </div>
-      </div>
-
-      {/* Scroll-to-top button */}
       <div
         onClick={scrollToTop}
         className={`scroll-up ${goUp ? "show-scroll" : ""}`}
