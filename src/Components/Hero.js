@@ -5,6 +5,10 @@ import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "../Styles/Hero.css";
 import Hospital1 from "../Assets/hospital1.jpg";
+
+import One1 from "../Assets/one1.jpg";
+import Two2 from "../Assets/two2.jpg";
+import Three from "../Assets/three3.jpg";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
@@ -45,8 +49,9 @@ function Hero() {
         interval={3000}
       >
         <div data-src={Hospital1} className="slider-img" />
-        <div data-src={Hospital1} className="slider-img" />
-        <div data-src={Hospital1} className="slider-img" />
+        <div data-src={One1} className="slider-img" />
+        <div data-src={Two2} className="slider-img" />
+        <div data-src={Three} className="slider-img" />
       </AutoplaySlider>
 
       <div
