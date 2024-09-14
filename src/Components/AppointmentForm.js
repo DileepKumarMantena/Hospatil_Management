@@ -268,6 +268,54 @@ const departmentOptions = [
     value: "Dr. David Clark",
     label: "Dr. David Clark (General Surgeon, 3yr EXP)",
   },
+  {
+    value: "Dr. John Doe",
+    label: "Dr. John Doe (Dermatology, 4yr EXP)",
+  },
+  {
+    value: "Dr. kiran",
+    label: "Dr. kiran (Dermatology, 2yr EXP)",
+  },
+  {
+    value: "Dr. White",
+    label: "Dr. White (Dermatology, 1yr EXP)",
+  },
+  {
+    value: "Dr. Brown",
+    label: "Dr. Brown (Dermatology, 5yr EXP)",
+  },
+  {
+    value: "Dr. rajesh",
+    label: "Dr. rajesh (Gastroenterology, 4yr EXP)",
+  },
+  {
+    value: "Dr. kumar",
+    label: "Dr. kumar (Gastroenterology, 2yr EXP)",
+  },
+  {
+    value: "Dr. williams",
+    label: "Dr. williams (Gastroenterology, 1yr EXP)",
+  },
+  {
+    value: "Dr. uday",
+    label: "Dr. uday (Gastroenterology, 5yr EXP)",
+  },
+  {
+    value: "Dr. vijay Kumar",
+    label: "Dr. vijay Kumar (Oncologist, 4yr EXP)",
+  },
+  {
+    value: "Dr. vamshi",
+    label: "Dr. vamshi (Oncologist, 2yr EXP)",
+  },
+  {
+    value: "Dr. Rahul",
+    label: "Dr. Rahul (Oncologist, 1yr EXP)",
+  },
+  {
+    value: "Dr. Praveen",
+    label: "Dr. Praveen (Oncologist, 5yr EXP)",
+  },
 ];
 
 function AppointmentForm() {

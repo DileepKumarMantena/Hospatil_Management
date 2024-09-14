@@ -11,6 +11,10 @@ import Doctors from "./Components/Doctors";
 import Orthopedics from "./Components/Orthopedics";
 import Neurology from "./Components/Neurology";
 import GeneralSurgery from "./Components/GeneralSurgery";
+import MoreDepartments from './Components/MoreDepartments';
+import Dermatology from "./Components/Dermatology";
+import Gastroenterology from "./Components/Gastroenterology";
+import Oncologist from "./Components/Oncologist";
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
           <Route path="/orthopedics" element={<Orthopedics />} />
           <Route path="/neurology" element={<Neurology />} />
           <Route path="/generalsurgery" element={<GeneralSurgery />} />
+          <Route path="/moredepartments" element={<MoreDepartments/>}/>
+          <Route path="/dermatology" element={<Dermatology />} />
+          <Route path="/gastroenterology" element={<Gastroenterology />} />
+          <Route path="/oncologist" element={<Oncologist />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
