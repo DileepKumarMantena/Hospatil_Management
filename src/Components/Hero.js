@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "../Styles/Hero.css";
-import Hospital1 from "../Assets/hospital1.jpg";
 
-import One1 from "../Assets/one1.jpg";
-import Two2 from "../Assets/two2.jpg";
-import Three from "../Assets/three3.jpg";
+import Hospital1 from "../Assets/hospatil_slider1.jpeg";
+import One1 from "../Assets/hospatil_slider2.jpeg";
+import Two2 from "../Assets/hospatil_slider3.jpeg";
+import Three from "../Assets/hospatil_slider4.jpeg";
+import Four from "../Assets/hospatil_slider5.jpeg";
+
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
@@ -52,6 +54,7 @@ function Hero() {
         <div data-src={One1} className="slider-img" />
         <div data-src={Two2} className="slider-img" />
         <div data-src={Three} className="slider-img" />
+        <div data-src={Four} className="slider-img" />
       </AutoplaySlider>
 
       <div
